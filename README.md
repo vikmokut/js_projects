@@ -1,1 +1,1 @@
-Explore my personal work in JS
+## Explore my personal work in JS
