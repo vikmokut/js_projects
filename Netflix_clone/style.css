@@ -1,0 +1,158 @@
+:root {
+    /* declaring global variables that would be repeatedly used throughout the design - see .btn for use case */
+    --primary-color: #e50914;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    height: 93vh;
+    width: 100%;
+    position: relative;
+    /* The center makes image show in area, cover makes all its part visible without cutting any areas */
+    background: url('img/background.jpg') no-repeat center center/cover;
+}
+
+/* This is what creates the dull effect on the background image allowing it to stay cool and not interfere with the actual content - seems like a screen over a screen */
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index is used to determine the clarity of contents on screen - the higher the value the obvious it is. */
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    /* create a shadow */
+    box-shadow: inset 120px 100px 250px #050202, inset -120px -100px 250px #050202;
+}
+
+.showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+    /*brings content forward */
+}
+
+.showcase-top img {
+    position: absolute;
+    width: 125px;
+    /* To make NETFLIX logo image centralized */
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-top a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+
+    z-index: 2;
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    /* seems to create a kinda 3D effect */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+
+}
+
+.btn:hover {
+    /* opacity fades out the container, the lower the value the more opec */
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    /* Its prefered to use text transform than type in html using caps */
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    /* Its prefered to use text transform than type in html using caps */
+    text-transform: uppercase;
+}
