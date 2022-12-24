@@ -1,0 +1,36 @@
+body {
+    background-color: seagreen;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.keyboard {
+    background-color: rgb(31, 30, 29);
+}
+
+.keys input {
+    padding: 20px;
+    background-color: blue;
+    font-size: medium;
+    color: antiquewhite;
+}
+
+input:hover {
+    background: #468486;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    background-color: black;
+    padding: 20px;
+    color: antiquewhite;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.homelinks {
+    margin-top: 70px;
+}
